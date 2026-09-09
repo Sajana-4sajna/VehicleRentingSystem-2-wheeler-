@@ -17,8 +17,8 @@ if(!isset($_SESSION['Aid'])) {
 
 
 
-                $_SESSION['Aid'] = $row['Aid'];
-                $_SESSION['name'] = $row['name'];
+                $_SESSION['Aid'] = $admin['Aid'];
+                $_SESSION['name'] = $admin['name'];
             }else{
 
                 header("Location: 1.login.php");
@@ -53,38 +53,38 @@ if(!isset($_SESSION['Aid'])) {
                     <h2>System</h2>
                 </div>
             </div>
-            <button class="close-btn">
+            <!-- <button class="close-btn">
                 <span class="material-symbols-outlined">close</span>
-            </button>
+            </button> -->
         </div>
 
         <nav>
-            <a href="#" class="active">
+            <a href="2.1.dashboardSlidebar.php" class="active">
                 <span class="material-symbols-outlined">dashboard</span>
                 <span>Dashboard</span>
             </a>
-            <a href="#">
+            <a href="2.2.customerSlidebar.php ">
                 <span class="material-symbols-outlined">person</span>
                 <span>Customers</span>
             </a>
-            <a href="#">
+            <a href="2.3.vehicleSlidebar.php">
                 <span class="material-symbols-outlined">bike_scooter</span>
                 <span>Vehicles</span>
             </a>
-            <a href="#">
+            <a href="2.4.bookingSlidebar.php">
                 <span class="material-symbols-outlined">event_available</span>
                 <span>Bookings</span>
             </a>
-            <a href="#">
+            <a href="2.5.paymentSlidebar.php">
                 <span class="material-symbols-outlined">payments</span>
                 <span>Payments</span>
             </a>
-            <a href="#">
+            <a href="2.6.revieSlidebar.php">
                 <span class="material-symbols-outlined">reviews</span>
                 <span>Reviews</span>
                 <small class="badge">10</small>
             </a>
-            <a href="#">
+            <a href="2.7.settingSlidebar.php">
                 <span class="material-symbols-outlined">settings</span>
                 <span>Settings</span>
             </a>
@@ -115,13 +115,66 @@ if(!isset($_SESSION['Aid'])) {
                 <button class="notification-btn">
                     <span class="material-symbols-outlined"> notifications </span>
                 </button>
-                <div class="admin-profile">
-                    <img src="../Assests/cat.jpg" alt="Admin">
-                    <div>
-                        <h4><?php echo $_SESSION['name']; ?></h4>
-                        <small>Vehicle Manager</small>
+
+            
+                <div class="profile-wrapper">
+
+                 <!-- Admin Profile -->
+                    <div class="admin-profile" onclick="toggleProfileMenu()">
+
+                     <img src="../Assests/cat.jpg" alt="Admin">
+
+                        <div class="adminInfo">
+                            <h4><?php echo $_SESSION['name']; ?></h4>
+                            <small>Vehicle Manager</small>
+
+                              <!-- Profile Dropdown -->
+                     <div class="profileDropdown" id="profileDropdown">
+
+                        <a href="profile.php">
+                        <span class="material-symbols-outlined">
+                        person
+                        </span>
+                        <span>My Profile</span>
+                        </a>
+
+                        <a href="changePassword.php">
+                            <span class="material-symbols-outlined">
+                                lock
+                            </span>
+                            <span>Change Password</span>
+                        </a>
+
+                        <a href="settings.php">
+                            <span class="material-symbols-outlined">
+                                settings
+                            </span>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="3.logout.php" class="profile-logout">
+                            <span class="material-symbols-outlined">
+                                logout
+                            </span>
+                            <span>Logout</span>
+                        </a>
+
+                      </div>
+                        </div>
+
+                        <!-- <span class="material-symbols-outlined">
+                            expand_more
+                        </span> -->
+
                     </div>
+
+
+                  
+
                 </div>
+                
+
+                
             </div>
         </header>
 
