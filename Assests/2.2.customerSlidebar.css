@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #F4F7FE;
+    color: #333;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    padding: 30px 35px;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.page-header p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ADMIN
+========================= */
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-info img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #EEECFF;
+    color: #282477;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-card h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* =========================
+   CUSTOMER CONTAINER
+========================= */
+
+.customer-container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   CUSTOMER TOP
+========================= */
+
+.customer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.customer-top h2 {
+    font-size: 19px;
+    color: #222;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.customer-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+}
+
+.search span {
+    color: #777;
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+
+/* =========================
+   STATUS FILTER
+========================= */
+
+.customer-tools select {
+    width: 130px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding: 0 10px;
+    outline: none;
+    background: white;
+}
+
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+
+.search-button {
+    height: 40px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 7px;
+    background: #282477;
+    color: white;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #F7F7FB;
+}
+
+th {
+    padding: 14px 12px;
+    text-align: left;
+    font-size: 13px;
+    color: #555;
+}
+
+td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+
+/* =========================
+   CUSTOMER PHOTO
+========================= */
+
+.customer-photo {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.status.active {
+    background: #E7F7ED;
+    color: #198754;
+}
+
+.status.blocked {
+    background: #FDEAEA;
+    color: #DC3545;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.actions {
+    display: flex;
+    gap: 7px;
+}
+
+.view-btn,
+.edit-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.view-btn {
+    background: #EEECFF;
+    color: #282477;
+}
+
+.edit-btn {
+    background: #FFF3DC;
+    color: #D58A00;
+}
+
+.view-btn:hover,
+.edit-btn:hover {
+    opacity: 0.75;
+}
+
+
+/* =========================
+   NO DATA
+========================= */
+
+.no-data {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pagination button.selected {
+    background: #282477;
+    color: white;
+    border-color: #282477;
+}

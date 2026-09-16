@@ -318,6 +318,31 @@ ul{
     color: #ef4444;
 }
 
+/* Admin Profile */
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.admin-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.adminInfo h4 {
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+.adminInfo small {
+    font-size: 13px;
+    color: #666;
+}
+
 
 
 

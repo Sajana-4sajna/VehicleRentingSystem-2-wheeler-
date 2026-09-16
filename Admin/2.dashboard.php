@@ -126,7 +126,7 @@ if(!isset($_SESSION['Aid'])) {
 
                         <div class="adminInfo">
                             <h4><?php echo $_SESSION['name']; ?></h4>
-                            <small>Vehicle Manager</small>
+                            <small> Admin</small>
 
                               <!-- Profile Dropdown -->
                      <div class="profileDropdown" id="profileDropdown">
