@@ -1,0 +1,176 @@
+
+
+/* CUSTOMER PAGE */
+.container {
+    padding: 30px;
+}
+
+.container h1 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* CUSTOMER STATISTICS */
+.customer-stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-box h3 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* SEARCH AND FILTER */
+.customer-tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.search {
+    flex: 1;
+}
+
+.search input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search input:focus {
+    border-color: #555;
+}
+
+.customer-tools select {
+    padding: 11px 14px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background: white;
+    outline: none;
+}
+
+.search-button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+}
+
+.search-button:hover {
+    opacity: 0.85;
+}
+
+/* CUSTOMER TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th {
+    background: #f5f6fa;
+    color: #444;
+    font-size: 14px;
+    text-align: left;
+    padding: 15px;
+}
+
+table td {
+    padding: 14px 15px;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+}
+
+/* CUSTOMER PHOTO */
+.customer-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* STATUS */
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.active {
+    background: #e7f8ee;
+    color: #1b8a4b;
+}
+
+.status.blocked {
+    background: #fdeaea;
+    color: #d93030;
+}
+
+/* ACTION BUTTONS */
+.actions {
+    white-space: nowrap;
+}
+
+.actions a {
+    display: inline-block;
+    padding: 7px 11px;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* VIEW */
+.view-btn {
+    background: #e8f0fe;
+    color: #2563eb;
+}
+
+/* EDIT */
+.edit-btn {
+    background: #fff4df;
+    color: #d88900;
+}
+
+/* BLOCK */
+.block-btn {
+    background: #fdeaea;
+    color: #d93030;
+}
+
+/* UNBLOCK */
+.unblock-btn {
+    background: #e7f8ee;
+    color: #1b8a4b;
+}
+
+.actions a:hover {
+    opacity: 0.75;
+}

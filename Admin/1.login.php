@@ -76,7 +76,7 @@ if(isset($_POST['login'])){
         </div>
         <div class="login-box">
 
-            <form action="" method="POST">
+            <form action="" method="POST" onsubmit="return validateLogin()>
 
                 <label for="">Username:</label>
                 <input type="text" name="username" id="username" placeholder="Enter your username">
@@ -104,7 +104,7 @@ if(isset($_POST['login'])){
                         
                         
     </div>
-    <script src="./login.js"></script>
+    <script src="./1.login.js"></script>
 </body>
 </html>
  

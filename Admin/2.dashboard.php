@@ -63,7 +63,7 @@ if(!isset($_SESSION['Aid'])) {
                 <span class="material-symbols-outlined">dashboard</span>
                 <span>Dashboard</span>
             </a>
-            <a href="2.2.customerSlidebar.php ">
+            <a href="2.2.customer.php ">
                 <span class="material-symbols-outlined">person</span>
                 <span>Customers</span>
             </a>
@@ -145,12 +145,6 @@ if(!isset($_SESSION['Aid'])) {
                             <span>Change Password</span>
                         </a>
 
-                        <a href="settings.php">
-                            <span class="material-symbols-outlined">
-                                settings
-                            </span>
-                            <span>Settings</span>
-                        </a>
 
                         <a href="3.logout.php" class="profile-logout">
                             <span class="material-symbols-outlined">
@@ -276,6 +270,6 @@ if(!isset($_SESSION['Aid'])) {
 <script src="./2.dashboard.js"></script>
 </body>
 <footer class="footer">
-    <p>© 2026 Vehicle Rental System | Developed by BCA 4th Semester studentw</p>
+    <p>© 2026 Vehicle Rental System | Developed by BCA 4th Semester student</p>
 </footer>
 </html>
