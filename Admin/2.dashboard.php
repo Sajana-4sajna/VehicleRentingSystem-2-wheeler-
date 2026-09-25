@@ -18,7 +18,7 @@ if(!isset($_SESSION['Aid'])) {
 
 
                 $_SESSION['Aid'] = $admin['Aid'];
-                $_SESSION['name'] = $admin['name'];
+                $_SESSION['username'] = $admin['username'];
             }else{
 
                 header("Location: 1.login.php");
@@ -30,6 +30,15 @@ if(!isset($_SESSION['Aid'])) {
                 exit();
     }
 }
+/* Get currently logged-in admin */
+$Aid = $_SESSION['Aid'];
+
+$sql = "SELECT * FROM admin WHERE Aid = '$Aid'";
+$result = mysqli_query($connect, $sql);
+
+$admin = mysqli_fetch_assoc($result);
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +68,7 @@ if(!isset($_SESSION['Aid'])) {
         </div>
 
         <nav>
-            <a href="2.1.dashboardSlidebar.php" class="active">
+            <a href="2.dashboard.php" class="active">
                 <span class="material-symbols-outlined">dashboard</span>
                 <span>Dashboard</span>
             </a>
@@ -122,11 +131,11 @@ if(!isset($_SESSION['Aid'])) {
                  <!-- Admin Profile -->
                     <div class="admin-profile" onclick="toggleProfileMenu()">
 
-                     <img src="../Assests/cat.jpg" alt="Admin">
+                     <img src="../Assests/<?php echo htmlspecialchars($admin['profile_image']); ?>" alt="Admin">
 
                         <div class="adminInfo">
-                            <h4><?php echo $_SESSION['name']; ?></h4>
-                            <small> Admin</small>
+                            <h4><?php echo htmlspecialchars($admin['username']); ?></h4>
+                            <small> <?php echo htmlspecialchars($admin['role']); ?></small>
 
                               <!-- Profile Dropdown -->
                      <div class="profileDropdown" id="profileDropdown">
@@ -176,7 +185,7 @@ if(!isset($_SESSION['Aid'])) {
             <div class="dashboard-header">
                 <div>
                     <h1>Dashboard</h1>
-                    <p>Welcome back, <?php echo $_SESSION['name'];?> 👋</p>
+                    <p>Welcome back, <?php echo $_SESSION['username'];?> 👋</p>
                 </div>
             </div>
 

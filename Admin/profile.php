@@ -104,7 +104,7 @@ $admin = mysqli_fetch_assoc($result);
             <?php if (!empty($admin['profile_image'])) { ?>
 
                 <img
-                    src="../User/uploads/admin/<?php echo htmlspecialchars($admin['profile_image']); ?>"
+                    src="../Assests/<?php echo htmlspecialchars($admin['profile_image']); ?>"
                     alt="Admin Profile"
                     class="profile-image"
                 >
@@ -207,11 +207,11 @@ $admin = mysqli_fetch_assoc($result);
 
         <div class="profile-actions">
 
-            <a href="EditProfile.php?id=<?php echo $admin['Aid']; ?>" class="edit-btn">
+            <a href="editProfile.php?id=<?php echo $admin['Aid']; ?>" class="edit-btn">
                 Edit Profile
             </a>
 
-            <a href="ChangePassword.php" class="password-btn">
+            <a href="changePassword.php" class="password-btn">
                 Change Password
             </a>
 

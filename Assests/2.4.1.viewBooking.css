@@ -1,0 +1,189 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fa;
+    color: #222;
+}
+
+
+/* MAIN PAGE */
+
+.booking-page {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* HEADER */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+.page-header h1 {
+    margin-bottom: 8px;
+}
+
+
+.page-header p {
+    color: #666;
+}
+
+
+/* BACK BUTTON */
+
+.back-btn {
+    text-decoration: none;
+    padding: 10px 16px;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* SECTION */
+
+.section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
+/* DETAILS */
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.detail span {
+    font-size: 13px;
+    color: #777;
+}
+
+
+.detail strong {
+    font-size: 15px;
+}
+
+
+/* VEHICLE */
+
+.vehicle-box {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+
+.vehicle-image {
+    width: 280px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.no-image {
+    width: 280px;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+    border-radius: 8px;
+    color: #777;
+}
+
+
+.vehicle-details {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* STATUS FORM */
+
+.status-form {
+    display: flex;
+    gap: 10px;
+}
+
+
+.status-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.status-form button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+
+.status-form button:hover {
+    opacity: 0.85;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-box {
+        flex-direction: column;
+    }
+
+    .vehicle-details {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}

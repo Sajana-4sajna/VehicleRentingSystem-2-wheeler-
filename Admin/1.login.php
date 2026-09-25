@@ -10,7 +10,7 @@ if(isset($_POST['login'])){
         die ("Could not connect database !!");
     }
     $sql = "SELECT * FROM admin 
-    WHERE name = '$username' and password = '$password'";
+    WHERE username = '$username' and password = '$password'";
     $result = mysqli_query($connect,$sql);
     if(!$result) {
         die('query failed!'.mysqli_error($connect));
@@ -21,7 +21,7 @@ if(isset($_POST['login'])){
         if($password == $row['password']){
             //session created
             $_SESSION['Aid'] =$row['Aid'];
-            $_SESSION['name'] = $row['name'];
+            $_SESSION['username'] = $row['username'];
             if(isset($_POST['remember'])){
                 //generate random token
                 $token = bin2hex(random_bytes(32));
